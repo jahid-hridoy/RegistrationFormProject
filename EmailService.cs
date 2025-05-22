@@ -9,7 +9,7 @@ public class EmailService
     public async Task SendRegistrationEmailAsync(string toEmail, string userName)
     {
         var message = new MimeMessage();
-        message.From.Add(new MailboxAddress("Registration System Ostad Project", "your email address"));
+        message.From.Add(new MailboxAddress("Registration System Project", "your email address"));
         message.To.Add(new MailboxAddress(userName, toEmail));
         message.Subject = "Welcome to Our Platform!";
 
